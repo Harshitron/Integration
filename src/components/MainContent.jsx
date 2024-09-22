@@ -4,7 +4,7 @@ import { ChevronDown, ChevronRight, User, Building, Briefcase } from 'lucide-rea
 
 const userTypes = [
   { id: 'student', label: 'Student', icon: User, url: 'https://student-pmsss.vercel.app/' },
-  { id: 'sag', label: 'SAG Bureau', icon: Building, url: '/sag-portal' },
+  { id: 'sag', label: 'SAG Bureau', icon: Building, url: 'https://sag-bureau.vercel.app/' },
   { id: 'finance', label: 'Finance Bureau', icon: Briefcase, url: 'https://financebureau.vercel.app/' },
 ]
 
