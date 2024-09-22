@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown, ChevronRight, User, Building, Briefcase, ExternalLink } from 'lucide-react'
+import { ChevronDown, ChevronRight, User, Building, Briefcase } from 'lucide-react'
 
 const userTypes = [
-  { id: 'student', label: 'Student', icon: User },
-  { id: 'sag', label: 'SAG Bureau', icon: Building },
-  { id: 'finance', label: 'Finance Bureau', icon: Briefcase },
+  { id: 'student', label: 'Student', icon: User, url: 'https://student-pmsss.vercel.app/' },
+  { id: 'sag', label: 'SAG Bureau', icon: Building, url: '/sag-portal' },
+  { id: 'finance', label: 'Finance Bureau', icon: Briefcase, url: 'https://financebureau.vercel.app/' },
 ]
 
 const faqs = [
@@ -82,7 +82,7 @@ export default function MainContent({ activeSection }) {
                 {userTypes.map((type) => (
                   <Link
                     key={type.id}
-                    to={`/login/${type.id}`}
+                    to={type.url}
                     className="flex items-center justify-center px-4 py-3 bg-white text-blue-700 rounded-md font-medium hover:bg-blue-50 transition duration-150 ease-in-out"
                   >
                     <type.icon className="h-5 w-5 mr-2" />
